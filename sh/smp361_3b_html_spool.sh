@@ -24,8 +24,12 @@ input_file=${temp_file}
 output_type="html"
 fc_exec_item
 
+##################################
+
 rm -f "${temp_file}"
 unset temp_file
+
+##################################
 
 # ########################
 # ## Example 3:
