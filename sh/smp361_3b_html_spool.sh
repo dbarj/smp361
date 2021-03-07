@@ -16,14 +16,16 @@ fc_exec_item
 title='Test 2'
 main_table=''
 
-echo '<font size="40">Hello there!</font>' > myfile.txt
+fc_def_output_file temp_file 'myfile.txt'
 
-input_file='myfile.txt'
+echo '<font size="40">Hello there!</font>' > "${temp_file}"
 
+input_file=${temp_file}
 output_type="html"
 fc_exec_item
 
-rm -f myfile.txt
+rm -f "${temp_file}"
+unset temp_file
 
 # ########################
 # ## Example 3:

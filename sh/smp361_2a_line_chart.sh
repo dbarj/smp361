@@ -132,11 +132,13 @@ fc_exec_item
 title='Line Chart 4'
 main_table='DUAL'
 
+fc_def_output_file temp_file 'my.csv'
+
 ## Creating a CSV File. This file may already exist.
-echo 'Date,User,System,Idle' > my.csv
-echo '"2017-05-18 16:00:06",20,10,70' >> my.csv
-echo '"2017-05-18 16:00:07",10,10,80' >> my.csv
-echo '"2017-05-18 16:00:08",0,10,90' >> my.csv
+echo 'Date,User,System,Idle' > "${temp_file}"
+echo '"2017-05-18 16:00:06",20,10,70' >> "${temp_file}"
+echo '"2017-05-18 16:00:07",10,10,80' >> "${temp_file}"
+echo '"2017-05-18 16:00:08",0,10,90' >> "${temp_file}"
 
 tit_01='Info 1'
 tit_02='Info 2'
@@ -144,17 +146,18 @@ tit_03='Info 3'
 tit_04=''
 
 ## If input_file variable is set, line_chart code will look for it and ignore sql_text.
-input_file='my.csv'
 vaxis='Total Elapsed Time in secs'
 chartype='AreaChart'
 stacked='isStacked: true,'
 
+input_file="${temp_file}"
 output_type="table csv line"
 fc_exec_item
 
 ##################################
 
-rm -f my.csv mydata.txt
+rm -f "${temp_file}"
+unset temp_file
 
 ##################################
 
