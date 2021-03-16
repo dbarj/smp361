@@ -34,7 +34,7 @@ vaxis='Total Elapsed Time in secs'
 chartype='LineChart'
 stacked=''
 
-output_type="table line"
+output_type="table csv line"
 fc_exec_item
 
 ## PS: Note that columns returning "0" are ignored by line graph and columns named "dummy" are ignored by html output.
@@ -136,9 +136,9 @@ fc_def_output_file temp_file 'my.csv'
 
 ## Creating a CSV File. This file may already exist.
 echo 'Date,User,System,Idle' > "${temp_file}"
-echo '"2017-05-18 16:00:06",20,10,70' >> "${temp_file}"
+echo '2017-05-18 16:00:06,20,10,70' >> "${temp_file}"
 echo '"2017-05-18 16:00:07",10,10,80' >> "${temp_file}"
-echo '"2017-05-18 16:00:08",0,10,90' >> "${temp_file}"
+echo '2017-05-18 16:00:08,0,10,90' >> "${temp_file}"
 
 tit_01='Info 1'
 tit_02='Info 2'
