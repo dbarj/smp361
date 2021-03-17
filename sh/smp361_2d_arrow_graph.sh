@@ -21,6 +21,7 @@ fc_exec_item
 ## Real Life example: Track how deep a proxy user can go within Oracle DB
 
 title='Proy Users'
+fc_def_empty_var is_cdb
 fc_set_value_var_decode main_table "${is_cdb}" 'Y' 'CDB_PROXIES' 'DBA_PROXIES'
 
 sql_text="SELECT  proxy , client, '[color=blue]' FROM dba_proxies ORDER BY client"

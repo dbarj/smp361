@@ -50,6 +50,12 @@ Or
 $ bash smp361.sh offline ' '
 ```
 
+Or
+
+```
+$ bash smp361.sh mysql '-h localhost -P 3306 --protocol=tcp -u root -p' 1a
+```
+
 ## Results ##
 
 1. Unzip output **smp361_dbname_hostname_YYYYMMDD_HH24MI.zip** into a directory on your PC.

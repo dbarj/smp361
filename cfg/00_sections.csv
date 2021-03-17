@@ -2,23 +2,24 @@
 ## Use "," as field separator
 ## Format: Section ID [1a - 9z], File Sufix Name, Section Description, Skip Variables (If last field is empty or its variables return NULL, sql WILL be executed)
 ##
-1a,using_html_output.sh,Sample HTML Output
-1b,using_txt_output.sh,Sample TXT Output
-1c,using_csv_output.sh,Sample CSV Output
-1d,using_all_output.sh,Sample All Output
-1e,other_control_features.sh,Control Features
+1a,smp361_1a_using_html_output_oracle.sh,Sample HTML Output,${skip_if_not_oracle}
+1a,smp361_1a_using_html_output_mysql.sh,Sample HTML Output,${skip_if_not_mysql}
+1b,smp361_1b_using_txt_output.sh,Sample TXT Output
+1c,smp361_1c_using_csv_output.sh,Sample CSV Output
+1d,smp361_1d_using_all_output.sh,Sample All Output
+1e,smp361_1e_other_control_features.sh,Control Features
 ##
-2a,line_chart.sh,Sample Line Chart
-2b,pie_chart.sh,Sample Pie Chart
-2c,bar_chart.sh,Sample Bar Chart
-2d,arrow_graph.sh,Sample Arrow Graph
+2a,smp361_2a_line_chart.sh,Sample Line Chart
+2b,smp361_2b_pie_chart.sh,Sample Pie Chart
+2c,smp361_2c_bar_chart.sh,Sample Bar Chart
+2d,smp361_2d_arrow_graph.sh,Sample Arrow Graph
 ##
-3a,text_spool.sh,Sample TEXT File
-3b,html_spool.sh,Sample HTML Spool
+3a,smp361_3a_text_spool.sh,Sample TEXT File
+3b,smp361_3b_html_spool.sh,Sample HTML Spool
 ##
-4a,test_skip1.sh,This Section will only run if Version < 10gR2,${skip_ver_ge_10_2}
-4b,test_skip2.sh,This Section will only run if Version > 10gR2,${skip_ver_le_10_2}
-4c,test_skip3.sh,This Section will skip some topics
+4a,smp361_4a_test_skip1.sh,This Section will only run if Version < 10gR2,${skip_ver_ge_10_2}
+4b,smp361_4b_test_skip2.sh,This Section will only run if Version > 10gR2,${skip_ver_le_10_2}
+4c,smp361_4c_test_skip3.sh,This Section will skip some topics
 ##
 ## Note: You can optionally have sections 0a_pre.sh and 0b_post.sh (not defined on this csv).
 ## They are not mandatory and they instruct moat to run only once a initial sql before all of them (0a) or after all of them (0b).
