@@ -38,22 +38,22 @@ $ mv moat370-master/* moat370/
 $ bash smp361.sh sqlplus "/ as sysdba"
 ```
 
-Or
+or
 
 ```
 $ bash smp361.sh sqlcl "user/pass@db"
 ```
 
-Or
+or
 
 ```
 $ bash smp361.sh offline ' '
 ```
 
-Or
+or
 
 ```
-$ bash smp361.sh mysql '-h localhost -P 3306 --protocol=tcp -u root -p' 1a
+$ bash smp361.sh mysql '-h localhost -P 3306 --protocol=tcp -u root -p'
 ```
 
 ## Results ##
