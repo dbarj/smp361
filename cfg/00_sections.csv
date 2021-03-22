@@ -17,8 +17,8 @@
 3a,smp361_3a_text_spool.sh,Sample TEXT File
 3b,smp361_3b_html_spool.sh,Sample HTML Spool
 ##
-4a,smp361_4a_test_skip1.sh,This Section will only run if Version < 10gR2,${skip_ver_ge_10_2}
-4b,smp361_4b_test_skip2.sh,This Section will only run if Version > 10gR2,${skip_ver_le_10_2}
+4a,smp361_4a_test_skip1.sh,This Section will only run if Version < 10gR2,${skip_ver_ge_10_2}${skip_if_not_oracle}
+4b,smp361_4b_test_skip2.sh,This Section will only run if Version > 10gR2,${skip_ver_le_10_2}${skip_if_not_oracle}
 4c,smp361_4c_test_skip3.sh,This Section will skip some topics
 ##
 ## Note: You can optionally have sections 0a_pre.sh and 0b_post.sh (not defined on this csv).
