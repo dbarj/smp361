@@ -56,6 +56,15 @@ or
 $ bash smp361.sh mysql '-h localhost -P 3306 --protocol=tcp -u root -p'
 ```
 
+or
+
+```
+$ read -s PGPASSWORD
+xxxxxx
+$ export PGPASSWORD
+$ bash smp361.sh postgres '-h localhost -p 5432 -d postgres -U postgres'
+```
+
 ## Results ##
 
 1. Unzip output **smp361_dbname_hostname_YYYYMMDD_HH24MI.zip** into a directory on your PC.

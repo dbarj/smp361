@@ -8,12 +8,22 @@ main_table=''
 sql_text="SELECT '<font size=\"40\">Hello there!</font>' from dual"
 
 output_type="html"
-fc_exec_item
+test -z "${skip_if_postgres}" && fc_exec_item
 
 ########################
 ## Example 2:
 
 title='Test 2'
+main_table=''
+sql_text="SELECT '<font size=\"40\">Hello there!</font>'"
+
+output_type="html"
+test -z "${skip_if_not_postgres}" && fc_exec_item
+
+########################
+## Example 3:
+
+title='Test 3'
 main_table=''
 
 fc_def_output_file temp_file 'myfile.txt'

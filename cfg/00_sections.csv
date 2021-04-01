@@ -4,18 +4,23 @@
 ##
 1a,smp361_1a_using_html_output_oracle.sh,Sample HTML Output,${skip_if_not_oracle}
 1a,smp361_1a_using_html_output_mysql.sh,Sample HTML Output,${skip_if_not_mysql}
+1a,smp361_1a_using_html_output_postgres.sh,Sample HTML Output,${skip_if_not_postgres}
 1b,smp361_1b_using_txt_output.sh,Sample TXT Output
 1c,smp361_1c_using_csv_output.sh,Sample CSV Output
 1d,smp361_1d_using_all_output.sh,Sample All Output
 1e,smp361_1e_other_control_features.sh,Control Features
 ##
 2a,smp361_2a_line_chart.sh,Sample Line Chart
-2b,smp361_2b_pie_chart.sh,Sample Pie Chart
-2c,smp361_2c_bar_chart.sh,Sample Bar Chart
-2d,smp361_2d_arrow_graph.sh,Sample Arrow Graph
+2b,smp361_2b_pie_chart.sh,Sample Pie Chart,${skip_if_postgres}
+2b,smp361_2b_pie_chart_postgres.sh,Sample Pie Chart,${skip_if_not_postgres}
+2c,smp361_2c_bar_chart.sh,Sample Bar Chart,${skip_if_postgres}
+2c,smp361_2c_bar_chart_postgres.sh,Sample Bar Chart,${skip_if_not_postgres}
+2d,smp361_2d_arrow_graph.sh,Sample Arrow Graph,${skip_if_postgres}
+2d,smp361_2d_arrow_graph_postgres.sh,Sample Arrow Graph,${skip_if_not_postgres}
 ##
 3a,smp361_3a_text_spool.sh,Sample TEXT File
 3b,smp361_3b_html_spool.sh,Sample HTML Spool
+#3c,smp361_3c_postgres_views.sh,Postgres Views,${skip_if_not_postgres}
 ##
 4a,smp361_4a_test_skip1.sh,This Section will only run if Version < 10gR2,${skip_ver_ge_10_2}${skip_if_not_oracle}
 4b,smp361_4b_test_skip2.sh,This Section will only run if Version > 10gR2,${skip_ver_le_10_2}${skip_if_not_oracle}
