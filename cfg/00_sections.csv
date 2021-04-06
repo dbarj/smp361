@@ -8,7 +8,8 @@
 1b,smp361_1b_using_txt_output.sh,Sample TXT Output
 1c,smp361_1c_using_csv_output.sh,Sample CSV Output
 1d,smp361_1d_using_all_output.sh,Sample All Output
-1e,smp361_1e_other_control_features.sh,Control Features
+1e,smp361_1e_other_control_features_oracle.sh,Control Features,${skip_if_not_oracle}
+1e,smp361_1e_other_control_features_postgres.sh,Control Features,${skip_if_not_postgres}
 ##
 2a,smp361_2a_line_chart.sh,Sample Line Chart
 2b,smp361_2b_pie_chart.sh,Sample Pie Chart,${skip_if_postgres}
