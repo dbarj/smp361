@@ -2,7 +2,6 @@
 ## To change this behaviour, you can change max_rows before calling each fc_exec_item
 
 title='Returning 20000 rows'
-main_table='dual'
 
 sql_text='
 SELECT
@@ -15,7 +14,6 @@ fc_exec_item
 ##################################
 
 title='Trully returning 20000 rows'
-main_table='dual'
 
 sql_text='
 SELECT
@@ -29,7 +27,6 @@ fc_exec_item
 ##################################
 
 title='Query will take 5 secs'
-main_table='dual'
 
 sql_text='
 SELECT pg_sleep(5)'
@@ -41,7 +38,6 @@ fc_exec_item
 # This query will abort if takes more than 3 seconds to run.
 
 title='Query would take 100 secs'
-main_table='dual'
 
 sql_text='
 SELECT pg_sleep(100)'
@@ -52,7 +48,6 @@ fc_exec_item
 ##################################
 
 title='Fast query after failure'
-main_table='dual'
 
 sql_text='
 SELECT 1,2,3'
